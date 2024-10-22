@@ -101,6 +101,23 @@ button {
     display: block;
 }
 
+.header-menu-link.active {
+    position: relative;
+
+}
+
+.header-menu-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    display: block;
+    background-color: #404bbf;
+    border-radius: 2px;
+    height: 4px;
+}
+
 .header-contacts {
     font-style: normal;
     display: flex;
@@ -124,7 +141,8 @@ button {
 }
 
 .header-contacts-link:hover,
-.header-contacts-link:focus {
+.header-contacts-link:focus,
+.header-menu-link.active {
     color: #404bbf
 }
 
@@ -134,8 +152,17 @@ button {
 
 .title {
     background: #2e2f42;
+    background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .title-text {
@@ -221,6 +248,14 @@ button {
     color: #434455;
 }
 
+.features-icon{
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    padding: 24px 100px;
+}
 
 /*_______aside Третя секція_____ */
 
@@ -231,7 +266,6 @@ button {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-
 
 .aside-title {
     font-weight: 700;
@@ -253,6 +287,7 @@ button {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
 }
+
 
 .aside-sub-container{
     padding: 32px 0;
@@ -279,8 +314,38 @@ button {
     color: #434455;
 }
 
+.aside-soc-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+}
 
+.aside-soc-items {
+    width: 40px;
+    height: 40px;
+}
 
+.aside-soc-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms;
+}
+
+.aside-icon {
+    fill: #f4f4fd;
+}
+
+.aside-soc-link:hover,
+.aside-soc-link:focus{
+    border-color: #404BBF;
+}
 
 
 /* _______________Meta  четверта секція____________*/
@@ -374,3 +439,44 @@ display: inline-block;
     color: #f4f4fd;
     max-width: 264px;
 }
+
+.container-footer-soc{
+    display: block;
+}
+
+.footer-soc-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-soc-items {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms;
+}
+
+.footer-icon {
+    fill: #f4f4fd;
+}
+

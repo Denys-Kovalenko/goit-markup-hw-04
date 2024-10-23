@@ -50,6 +50,7 @@ button {
 
 .header-title {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container{
@@ -99,6 +100,7 @@ button {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link.active {
@@ -157,6 +159,7 @@ button {
     rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero-bg.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 188px;
@@ -191,7 +194,8 @@ button {
     height: 56px;
     bottom: none;
     display: block;
-        margin: 0 auto;
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -248,13 +252,16 @@ button {
     color: #434455;
 }
 
-.features-icon{
+.features-item-icon{
+    display: flex;
+    justify-content: center;
     width: 264px;
     height: 112px;
     background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     padding: 24px 100px;
+    margin-bottom: 8px;
 }
 
 /*_______aside Третя секція_____ */
@@ -345,7 +352,7 @@ button {
 .aside-soc-link:hover,
 .aside-soc-link:focus{
     border-color: #404BBF;
-    background-color: #31d0aa;
+    background-color: #404bbf;
 }
 
 
@@ -383,6 +390,7 @@ button {
 
 .meta-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .meta-item:hover .meta-cover-text{
@@ -522,7 +530,8 @@ display: inline-block;
     fill: #f4f4fd;
 }
 
-.footer-soc-link:hover {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
     background-color: #31d0aa;
     color: #4d5ae5;
 }
